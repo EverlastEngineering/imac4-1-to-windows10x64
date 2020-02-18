@@ -94,9 +94,10 @@ http://support.apple.com/downloads/DL1720/en_US/BootCamp5.1.5621.zip
 
 ## Step 8 - Graphics Drivers
 
-Now, here's a problem. I found that NO drivers worked for my ATI Radeon X1600 graphics card. You might have success with the Bootcamp driver found at `/Drivers/Apple/x64/AppleDisplayInstaller64.exe` inside the *Bootcamp4.0.4033.zip* but mine didn't work. So, I found these drivers for the ATI Mobility FireGL V5200 located at `http://www.catalog.update.microsoft.com/Search.aspx?q=v5200`. However, the cab extracts strangely so I've made a zip file bundle in this repo which has all the files and the duplicate folder under which allow it to install.
+Now, here's a problem. I found that NO drivers worked for my ATI Radeon X1600 graphics card. You might have success with the Bootcamp driver found at `/Drivers/Apple/x64/AppleDisplayInstaller64.exe` inside the *Bootcamp4.0.4033.zip* but mine didn't work. So, I found these drivers for the ATI Mobility FireGL V5200 which includes support for the x1600 located at `http://www.catalog.update.microsoft.com/Search.aspx?q=v5200`. However, the cab extracts strangely so I've made a zip file bundle in this repo which has all the files and the duplicate folder under which allow it to install.
 
 In order to install them, you must:
+ - download the file `ati-drivers.zip` from this repo at https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/video-drivers/ati-drivers.zip
  - unzip the files in a folder of your choice
  - browse to device manager
  - right click on the video driver
@@ -106,9 +107,10 @@ In order to install them, you must:
  - Have disk
  - Browse to where you unpacked package with drivers
  - Only click on Open with selecting first inf of listed
+ 
 Then, proceed with the driver installation.
 
-## Step 9 - Install Drivers
+## Step 9 - Install Remaining Drivers
 Open up the Bootcamp drivers, and look in the Drivers folder. There are loads of drivers, but don't install them all, instead, take an inventory of what is not working and find the specific driver for each. On the iMac4,1 it needs (and in order, sometimes):
 
  - /Drivers/Apple/x64/AppleBluetoothEnablerInstaller64.exe
@@ -123,3 +125,7 @@ Open up the Bootcamp drivers, and look in the Drivers folder. There are loads of
  
  ## Step 10 - Make it more 'Mac-like'
 This is an entirely option series of steps which you can omit any or all of. I performed these because I'm using a Mac keyboard, and I use a Mac in regular use; switching back to a Windows keyboard is difficult for me.
+
+For me the main criteria for "mac-like" doesn't include anything visually; it's **all** about the keyboard shortcuts. For a bare minimum I installed SharpKeys (https://www.randyrants.com/category/sharpkeys/) and swapped the Ctrl and the Windows (Command) key. This puts the Ctrl-z,x,c,v,b,a keys in the right place for me. Next, I used AutoHotKeys (https://www.autohotkey.com/) to make Ctrl-Q perform Alt-F4 and Ctrl-Tab perform Alt-Tab, and made Alt-Tab do the old Ctrl-Tab code. For hardware monitoring, I installed Macs Fan Control for Windows (https://www.crystalidea.com/macs-fan-control) which worked beautifully.
+
+You will find the parameter files I made for SharpKeys and AutoHotKeys in this repo.
