@@ -128,4 +128,4 @@ This is an entirely option series of steps which you can omit any or all of. I p
 
 For me the main criteria for "mac-like" doesn't include anything visually; it's **all** about the keyboard shortcuts. For a bare minimum I installed SharpKeys (https://www.randyrants.com/category/sharpkeys/) and swapped the Ctrl and the Windows (Command) key. This puts the Ctrl-z,x,c,v,b,a keys in the right place for me. Next, I used AutoHotKeys (https://www.autohotkey.com/) to make Ctrl-Q perform Alt-F4 and Ctrl-Tab perform Alt-Tab, and made Alt-Tab do the old Ctrl-Tab code. For hardware monitoring, I installed Macs Fan Control for Windows (https://www.crystalidea.com/macs-fan-control) which worked beautifully.
 
-You will find the parameter files I made for SharpKeys and AutoHotKeys in this repo.
+You will find the parameter files I made for SharpKeys and AutoHotKeys in this repo. (TODO)
