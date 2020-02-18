@@ -3,6 +3,7 @@ This is a depo for all the files and information needed to upgrade the first Int
 
 ## Step 1 - Upgrade the Firmware to iMac5,1
 Credits:
+
 http://forum.netkas.org/index.php/topic,1122.0.html
 http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747
 
@@ -47,4 +48,4 @@ http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747
 >The iMac will start the EFI update (a progress bar should be displayed)
 >Wait the EFI update to complete and….. Voila!
 
-##Step 2
+## Step 2
