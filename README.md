@@ -2,25 +2,26 @@
 This is a depo for all the files and information needed to upgrade the first Intel Mac, the Core Duo 32 bit machine, to a 64 bit processor and all the steps needed to get it to run Windows 10 x64.
 
 ## Step 1 - Upgrade the Firmware to iMac5,1
-Credits:
+`Credits:`
 
-http://forum.netkas.org/index.php/topic,1122.0.html
-http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747
+`http://forum.netkas.org/index.php/topic,1122.0.html`<br>
+`http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747`
 
->First up, you need to upgrade the firmware on you iMac4,1 to iMac5,1. The unzip this file in a location of your choice:
->https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMac41-iMac51%20Firmware%20Tool.zip
+First up, you need to upgrade the firmware on you iMac4,1 to iMac5,1. The unzip this file in a location of your choice:<br>
+https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMac41-iMac51%20Firmware%20Tool.zip
+
+The tool no longer works properly as the URL for the firmware has been updated. However, here is a workaround from the above forum. It's pretty straightforward.
 >
->These instructions are taken from 
->STEP 1 - Download EFI updates:
->https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMacFirmwareUpdate.dmg
+>STEP 1 - Download EFI updates:<br>
+>https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMacFirmwareUpdate.dmg<br>
 >https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMacFirmwareUpdate1.2.dmg
 >
->Efi update 1.1: https://support.apple.com/kb/DL305?viewlocale=en_US&locale=en_US
+>Efi update 1.1: https://support.apple.com/kb/DL305?viewlocale=en_US&locale=en_US<br>
 >Efi update 1.2: https://support.apple.com/kb/DL205?viewlocale=en_US&locale=es_ES
 >
 >STEP 2 - Remame downloaded .dmg
 >
->Efi update 1.1: iMacFirmwareUpdate.dmg -> rename to -> iMacEFIiMac41.dmg
+>Efi update 1.1: iMacFirmwareUpdate.dmg -> rename to -> iMacEFIiMac41.dmg<br>
 >Efi update 1.2: iMacFirmwareUpdate1.2.dmg -> rename to -> iMacEFIiMac51.dmg
 >
 >STEP 3 - Run iMac41-iMac51 Firmware Tool
