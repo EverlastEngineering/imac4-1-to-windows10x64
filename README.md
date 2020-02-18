@@ -1,43 +1,41 @@
-# imac4-1-to-windows10x64
-This is a depo for all the files and information needed to upgrade the first Intel Mac, the Core Duo 32 bit machine, to a 64 bit processor and all the steps needed to get it to run Windows 10 x64.
+# How to get the first Intel iMac to run Windows 10
+#### imac4-1-to-windows10x64
+The first Intel iMac was released in early 2006. This is a guide to run Windows 10 x64 on this machine and this depo contains most of the files and information needed. I've found it runs quite satisfactory.
 
 ### Step 1 - Upgrade the firmware to iMac5,1
-First up, you need to upgrade the firmware on you iMac4,1 to iMac5,1. The unzip this file in a location of your choice:<br>
+First up, you need to upgrade the firmware on you iMac4,1 to iMac5,1. Unzip this file in a location of your choice on your iMac in MacOS:<br>
 https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMac41-iMac51%20Firmware%20Tool.zip
 
-The tool no longer works properly as the URL for the firmware has been updated; it gives "error 5530". However, here is a workaround from the above forum. It's pretty straightforward.
+Unfortunately this tool no longer works properly as the URL to download the firmware has been changed. It gives "error 5530". However, here is a workaround from the source forum; it's pretty straightforward.
 
->
->STEP 1 - Download EFI updates:<br>
+>STEP A - Download EFI updates:<br>
 >https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMacFirmwareUpdate.dmg<br>
 >https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/bios-upgrade/iMacFirmwareUpdate1.2.dmg
 >
->Efi update 1.1: https://support.apple.com/kb/DL305?viewlocale=en_US&locale=en_US<br>
->Efi update 1.2: https://support.apple.com/kb/DL205?viewlocale=en_US&locale=es_ES
 >
->STEP 2 - Remame downloaded .dmg
+>STEP B - Rename downloaded `.dmg` files
 >
 >Efi update 1.1: iMacFirmwareUpdate.dmg -> rename to -> iMacEFIiMac41.dmg<br>
 >Efi update 1.2: iMacFirmwareUpdate1.2.dmg -> rename to -> iMacEFIiMac51.dmg
 >
->STEP 3 - Run iMac41-iMac51 Firmware Tool
+>STEP C - Run iMac41-iMac51 Firmware Tool
 >
 >Run it as usual. It will report error 5530 as before and it will create on desktop a RamDisk volume. DO NOT EXPULSE IT!
 >
->STEP 4 - Copy files to RamDisk
+>STEP D - Copy files to RamDisk
 >
 >Select "iMac41-iMac51 Firmware Tool.app", right click and then click on "Show packet content"
 >Copy the following files to "/Volumes/RamDisk": ExtractAndPatchEFIFiles.sh, iMac41EFIUpdater.patch, iMac51EFIUpdater.patch and UpdateEFIiMac41-iMac51.sh.
 >Copy also the two downloaded .dmg from Apple: iMacEFIiMac41.dmg and iMacEFIiMac51.dmg
 >
->STEP 5 - Lets do the Magic
+>STEP E - Lets do the Magic
 >
 >Open a terminal and drag and drop on it the ExtractAndPatchEFIFiles.sh script. Then run it and wait until everything finish
 >Open a terminal, type sudo and then drag and drop the UpdateEFIiMac41-iMac51.sh script:
 >sudo /Volumes/Ramdisk/UpdateEFIiMac41-iMac51.sh
 >Then run it and wait until everything finishes (at the end it should report that return code is 0, which means that everything worked correctly).
 >
->STEP 6 - Reboot
+>STEP F - Reboot
 >
 >Shutdown the iMac
 >Turn it on and keep pressed power button until the iMac light ENDS blinking
@@ -47,15 +45,18 @@ The tool no longer works properly as the URL for the firmware has been updated; 
 
 *Credits:<br>
 http://forum.netkas.org/index.php/topic,1122.0.html<br>
-http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747*
+http://forum.netkas.org/index.php/topic,1122.msg38747.html#msg38747*<br>
+*Sources:<br>
+https://support.apple.com/kb/DL305?viewlocale=en_US&locale=en_US<br>
+https://support.apple.com/kb/DL205?viewlocale=en_US&locale=es_ES*
 
 ### Step 2 - Upgrade your CPU to a Core 2 Duo
 I upgraded to a 2.0GHz T7200, which can be found on ebay for under $4. However, best performance is the T7600 which is a 2.33GHz CPU. This hardware upgrade is necessary to have a 64-bit CPU available for the operating system. Here's an ifixit link:
 https://www.ifixit.com/Guide/iMac+Intel+20-Inch+EMC+2105+and+2118+CPU+Replacement/35350
 
-I do believe that you could get away without upgrading the CPU and sticking to a 32bit operating system. Windows is the only OS to have an up-to-date Chrome package available in 32-bit as of Feb 2020. I chose to go to 64-bit to future-proof the machine a bit.
+It's possible that you could find success without upgrading the CPU and sticking to a 32-bit operating system. Windows is the only OS to have an up-to-date Chrome package available in 32-bit as of Feb 2020. I chose to go to 64-bit to future-proof the machine a bit. *As of this writing, there is still a current up-to-date 32-bit Chrome available for Windows: https://cloud.google.com/chrome-enterprise/browser/download/
 
-*You may also want to consider installing a SSD drive at this point. I used a Samsung SSD with a 3.5" to 2.5" SATA carrier with great success, and even reused the temperature sensor. You can use an external SATA mount to read/write and I used SuperDuper! to backup the old drive to the SSD which worked perfectly under Catalina. *
+You may also want to consider installing a SSD drive at this point. I used a Samsung SSD with a 3.5" to 2.5" SATA carrier with great success, and even reused the temperature sensor. You can use an external SATA mount to read/write and I used SuperDuper! to backup the old drive to the SSD which worked perfectly under Catalina.
 
 ### Step 3 - Partition your drive with Bootcamp
 Go into your installed MacOS and setup a bootcamp partition. You don't need your Windows install media or anything, just get the partition set up. It also sets up the emulated BIOS needed for windows to operate.
@@ -93,19 +94,32 @@ http://support.apple.com/downloads/DL1720/en_US/BootCamp5.1.5621.zip
 
 ## Step 8 - Graphics Drivers
 
-Now, here's a problem. I found that NO drivers worked for my ATI Radeon X1600 graphics card. You might have success with the Bootcamp driver found at `/Drivers/Apple/x64/AppleDisplayInstaller64.exe` inside the *Bootcamp4.0.4033.zip* but mine didn't work. So, I found these drivers for the ATI Mobility FireGL V5200:
+Now, here's a problem. I found that NO drivers worked for my ATI Radeon X1600 graphics card. You might have success with the Bootcamp driver found at `/Drivers/Apple/x64/AppleDisplayInstaller64.exe` inside the *Bootcamp4.0.4033.zip* but mine didn't work. So, I found these drivers for the ATI Mobility FireGL V5200 located at `http://www.catalog.update.microsoft.com/Search.aspx?q=v5200`. However, the cab extracts strangely so I've made a zip file bundle in this repo which has all the files and the duplicate folder under which allow it to install.
 
+In order to install them, you must:
+ - unzip the files in a folder of your choice
+ - browse to device manager
+ - right click on the video driver
+ - upgrade driver
+ - Browse for driver software ...
+ - Let me pick from list of device drivers ...
+ - Have disk
+ - Browse to where you unpacked package with drivers
+ - Only click on Open with selecting first inf of listed
+Then, proceed with the driver installation.
 
-## Step 8 - Install Drivers
+## Step 9 - Install Drivers
 Open up the Bootcamp drivers, and look in the Drivers folder. There are loads of drivers, but don't install them all, instead, take an inventory of what is not working and find the specific driver for each. On the iMac4,1 it needs (and in order, sometimes):
 
--/Drivers/Apple/x64/AppleBluetoothEnablerInstaller64.exe
--/Drivers/Apple/x64/AppleBluetoothInstaller64.exe
--/Drivers/Apple/x64/AppleiSightInstaller64.exe
--/Drivers/Apple/x64/AppleKeyboardInstaller64.exe
--/Drivers/Apple/x64/AppleMultiTouchTrackPadInstaller64.exe
--/Drivers/Apple/x64/AppleNullDriver64.exe (Performance Counters device)
--/Drivers/Apple/x64/AppleODDInstaller64.exe
--/Drivers/Apple/x64/AppleTrackpadInstaller64.exe
--/Drivers/Apple/x64/AppleWirelessMouse64.exe
-
+ - /Drivers/Apple/x64/AppleBluetoothEnablerInstaller64.exe
+ - /Drivers/Apple/x64/AppleBluetoothInstaller64.exe
+ - /Drivers/Apple/x64/AppleiSightInstaller64.exe
+ - /Drivers/Apple/x64/AppleKeyboardInstaller64.exe
+ - /Drivers/Apple/x64/AppleMultiTouchTrackPadInstaller64.exe
+ - /Drivers/Apple/x64/AppleNullDriver64.exe (Performance Counters device)
+ - /Drivers/Apple/x64/AppleODDInstaller64.exe
+ - /Drivers/Apple/x64/AppleTrackpadInstaller64.exe
+ - /Drivers/Apple/x64/AppleWirelessMouse64.exe
+ 
+ ## Step 10 - Make it more 'Mac-like'
+This is an entirely option series of steps which you can omit any or all of. I performed these because I'm using a Mac keyboard, and I use a Mac in regular use; switching back to a Windows keyboard is difficult for me.
