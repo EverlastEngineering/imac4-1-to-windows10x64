@@ -65,7 +65,7 @@ Go into your installed MacOS and setup a bootcamp partition. You don't need your
 Download Windows 7 Professional. I downloaded from the legal Internet Archive, where it can be found here:
 https://archive.org/details/Windows7Professional64Bit
 
-You may already have a Windows 7 DVD. Here's the problem: when you boot this disk, you get prompted to make a choice about installation; the installer will fail due to the 32bit EFI and 64bit CPU. So to remedy this you need to build a new ISO after using the *Oscdimg* tool. *Oscdimg* is a command-line tool that you can use to create an image (.iso) file of a customized 32-bit or 64-bit version of Windows Preinstallation Environment (Windows PE). Download it here:
+You may already have a Windows 7 DVD. Here's the problem: when you boot this disk, you get prompted to make a choice about installation; the installer will ask you to make a selection and the keyboard will appear to not work. It will ultimately fail due to the 32-bit EFI and 64-bit CPU. So to remedy this you need to build a new ISO after using the *Oscdimg* tool. *Oscdimg* is a command-line tool that you can use to create an image (.iso) file of a customized 32-bit or 64-bit version of Windows Preinstallation Environment (Windows PE). Download it here:
 https://github.com/jasoncopp/imac4-1-to-windows10x64/blob/master/image-creating-tool/oscdimg.zip
 
 Extract the Windows 7 ISO to a folder on a Windows PC. Then, go to an appropriate location and run the *Oscdimg* tool from the cmd prompt with this format, substituting the proper folder names, etc:
@@ -76,7 +76,7 @@ Burn this new ISO to a DVD.
 *Credit: https://www.jackfeschuk.com/fixing-select-cd-rom-boot-type-when-installing-64bit-windows/*
 
 ### Step 5 - Install Windows 7 with no product key or Bootcamp drivers
-Now, boot the mac while holding Option after the chime. When you insert this newly created DVD, you will be able to choose it from the boot menu, which will install Windows 7. Skip entering a Windows Key, and don't bother to find any drivers for it, as we're going to blow away this Windows with a new install later. This step is because the Windows 10 installer doesn't do well with the 32bit EFI and 64bit CPU, even when booting from DVD. It can cause issues during the install or afterwards. Using Windows 7 to start seems to avoid this problem.
+Now, boot the mac while holding Option after the chime. When you insert this newly created DVD, you will be able to choose it from the boot menu, which will install Windows 7. Skip entering a Windows Key, and don't bother to find any drivers for it, as we're going to blow away this Windows with a new install later. This step is because the Windows 10 installer doesn't do well with the 32-bit EFI and 64-bit CPU, even when booting from DVD. It can cause issues during the install or afterwards. Using Windows 7 to start seems to avoid this problem.
 
 ### Step 6 - Install Windows 10
 I installed Windows 10 from USB from within Windows 7. It renames the Windows folder to Windows.old which you can delete later. I actually went to an older version of Windows 10 initially, then to a newer one, but I think you can go directly to the latest Windows 10 ISO available from Microsoft's website:
