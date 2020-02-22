@@ -1,6 +1,8 @@
 # How to get the first Intel iMac to run Windows 10
-#### imac4-1-to-windows10x64
-The first Intel iMac was released in early 2006. This is a guide to run Windows 10 x64 on this machine and this depo contains most of the files and information needed. I've found it runs quite satisfactory.
+###### imac4-1-to-windows10x64
+
+### Purpose of this document
+The first Intel iMac was released in early 2006. This is a guide on how to upgrade the iMac4,1 to run the latest (as of Feb 2020) Windows 10 x64 and this depo contains most of the files and information needed. I've found it runs quite satisfactory.
 
 ### Step 1 - Upgrade the firmware to iMac5,1
 First up, you need to upgrade the firmware on you iMac4,1 to iMac5,1. Unzip this file in a location of your choice on your iMac in MacOS:<br>
@@ -135,3 +137,7 @@ https://github.com/EverlastEngineering/imac4-1-to-windows10x64/blob/master/sharp
 
 And finally, here's the AutoHoyKey script to help with command-q, command-tab and command-space for spotlight:
 https://github.com/EverlastEngineering/imac4-1-to-windows10x64/blob/master/sharpkeys-autohotkeys/Simple%20Mac%20Hotkeys.ahk
+
+### Conclusion
+Hope you've enjoyed my walkthrough. Please check out my youtube video on the subject when complete:
+https://www.youtube.com/user/everlasting1/
