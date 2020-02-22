@@ -128,4 +128,11 @@ This is an entirely option series of steps which you can omit any or all of. I p
 
 For me the main criteria for "mac-like" doesn't include anything visually; it's **all** about the keyboard shortcuts. For a bare minimum I installed SharpKeys (https://www.randyrants.com/category/sharpkeys/) and swapped the Ctrl and the Windows (Command) key. This puts the Ctrl-z,x,c,v,b,a keys in the right place for me. Next, I used AutoHotKeys (https://www.autohotkey.com/) to make Ctrl-Q perform Alt-F4 and Ctrl-Tab perform Alt-Tab, and made Alt-Tab do the old Ctrl-Tab code. For hardware monitoring, I installed Macs Fan Control for Windows (https://www.crystalidea.com/macs-fan-control) which worked beautifully.
 
-You will find the parameter files I made for SharpKeys and AutoHotKeys in this repo. (TODO)
+Here's a snapshot of my SharpKeys settings:
+https://raw.githubusercontent.com/EverlastEngineering/imac4-1-to-windows10x64/master/sharpkeys-autohotkeys/sharpkeys.png
+
+And here you can download the save file for it:
+https://github.com/EverlastEngineering/imac4-1-to-windows10x64/blob/master/sharpkeys-autohotkeys/Mac%20SharpKeys.skl
+
+And finally, here's the AutoHoyKey script to help with command-q, command-tab and command-space for spotlight:
+https://github.com/EverlastEngineering/imac4-1-to-windows10x64/blob/master/sharpkeys-autohotkeys/Simple%20Mac%20Hotkeys.ahk
