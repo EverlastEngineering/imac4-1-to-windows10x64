@@ -88,8 +88,9 @@ https://www.microsoft.com/en-ca/software-download/windows10ISO
 For my Early iMac 2006 17" machine, I needed the *BootCamp4.0.4033.zip* file. When you try to get the Bootcamp support file from MacOS (10.6.8, in my case) it gives an error downloading it. That's because this URL is no longer valid:
 https://support.apple.com/kb/DL1630?locale=en_US
 
-You'll notice it goes to a CDN that tries to serve *BootCamp4.0.4033.zip* but fails, so I found a working copy and uploaded it here to this repo:
-*insert url here*
+You'll notice it goes to a CDN that tries to serve *BootCamp4.0.4033.zip* but fails, so I found a working copy and uploaded the needed files from it into the missing-bootcamp-drivers folder of this repo.
+
+A google for the file *BootCamp4.0.4033.zip* might help you find the same file I found, or you could bug apple to put the files back online.
 
 If you're doing this upgrade on a slightly different machine, these drivers might not be the right ones, in which case you'll have to find the best suited Bootcamp zip file for your machine. Another good candidate for a lot of machines is *BootCamp5.1.5621.zip*, which is still available from Apple directly:
 http://support.apple.com/downloads/DL1720/en_US/BootCamp5.1.5621.zip
@@ -112,17 +113,17 @@ In order to install them, you must:
 Then, proceed with the driver installation.
 
 ### Step 9 - Install Remaining Drivers
-Open up the Bootcamp drivers, and look in the Drivers folder. There are loads of drivers, but don't install them all, instead, take an inventory of what is not working and find the specific driver for each. On the iMac4,1 it needs (and in order, sometimes):
+Open up the missing-bootcamp-drivers folder. There are loads of drivers, but don't install them all, instead, take an inventory of what is not working and find the specific driver for each. On the iMac4,1 it needs (and in order, sometimes):
 
- - /Drivers/Apple/x64/AppleBluetoothEnablerInstaller64.exe
- - /Drivers/Apple/x64/AppleBluetoothInstaller64.exe
- - /Drivers/Apple/x64/AppleiSightInstaller64.exe
- - /Drivers/Apple/x64/AppleKeyboardInstaller64.exe
- - /Drivers/Apple/x64/AppleMultiTouchTrackPadInstaller64.exe
- - /Drivers/Apple/x64/AppleNullDriver64.exe (Performance Counters device)
- - /Drivers/Apple/x64/AppleODDInstaller64.exe
- - /Drivers/Apple/x64/AppleTrackpadInstaller64.exe
- - /Drivers/Apple/x64/AppleWirelessMouse64.exe
+ - AppleBluetoothEnablerInstaller64.exe
+ - AppleBluetoothInstaller64.exe
+ - AppleiSightInstaller64.exe
+ - AppleKeyboardInstaller64.exe
+ - AppleMultiTouchTrackPadInstaller64.exe
+ - AppleNullDriver64.exe (Performance Counters device)
+ - AppleODDInstaller64.exe
+ - AppleTrackpadInstaller64.exe
+ - AppleWirelessMouse64.exe
  
 ### Step 10 - Make it more 'Mac-like'
 This is an entirely option series of steps which you can omit any or all of. I performed these because I'm using a Mac keyboard, and I use a Mac in regular use; switching back to a Windows keyboard is difficult for me.
