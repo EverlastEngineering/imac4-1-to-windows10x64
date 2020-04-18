@@ -140,5 +140,5 @@ And finally, here's the AutoHoyKey script to help with command-q, command-tab an
 https://github.com/EverlastEngineering/imac4-1-to-windows10x64/blob/master/sharpkeys-autohotkeys/Simple%20Mac%20Hotkeys.ahk
 
 ### Conclusion
-Hope you've enjoyed my walkthrough. Please check out my youtube video on the subject when complete:
-https://www.youtube.com/user/everlasting1/
+Hope you've enjoyed my walkthrough. Please check out my youtube video showing the teardown to install the CPU:
+https://www.youtube.com/watch?v=_Ef97RzIXJk
